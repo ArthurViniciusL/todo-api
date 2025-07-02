@@ -1,0 +1,81 @@
+### Get all Persons
+GET http://localhost:8080/persons
+Accept: application/json
+
+### Get Person by ID
+GET http://localhost:8080/persons/1
+Accept: application/json
+
+### Create a new Person
+POST http://localhost:8080/persons
+Content-Type: application/json
+Accept: application/json
+
+{
+  "name": "Arthur Vinicius",
+  "email": "arthur@example.com"
+}
+
+### Update an existing Person
+PUT http://localhost:8080/persons/1
+Content-Type: application/json
+Accept: application/json
+
+{
+  "name": "Arthur Atualizada",
+  "email": "arthur.atualizada@example.com"
+}
+
+### Delete a Person by ID
+DELETE http://localhost:8080/persons/1
+Accept: application/json
+
+### Get all Tasks
+GET http://localhost:8080/tasks
+Accept: application/json
+
+### Get Task by ID
+# Substitua pelo UUID de uma Task existente
+GET http://localhost:8080/tasks/a1b2c3d4-e5f6-7890-1234-567890abcdef
+Accept: application/json
+
+### Create a new Task
+POST http://localhost:8080/tasks
+Content-Type: application/json
+Accept: application/json
+
+{
+  "description": "Comprar mantimentos",
+  "status": "PENDING"
+}
+
+### Update an existing Task
+# Substitua pelo UUID de uma Task existente
+PUT http://localhost:8080/tasks/a1b2c3d4-e5f6-7890-1234-567890abcdef
+Content-Type: application/json
+Accept: application/json
+
+{
+  "description": "Comprar mantimentos (atualizado)",
+  "status": "not started"
+}
+
+### Delete a Task by ID
+# Substitua pelo UUID de uma Task existente
+DELETE http://localhost:8080/tasks/a1b2c3d4-e5f6-7890-1234-567890abcdef
+Accept: application/json
+
+### Get Tasks by Person ID
+# Substitua pelo ID de uma Person existente
+GET http://localhost:8080/persons/1/tasks
+Accept: application/json
+
+### Assign a Task to a Person
+# Substitua pelos IDs de Person e Task existentes
+POST http://localhost:8080/persons/1/tasks/a1b2c3d4-e5f6-7890-1234-567890abcdef
+Accept: application/json
+
+### Remove a Task from a Person
+# Substitua pelos IDs de Person e Task existentes
+DELETE http://localhost:8080/persons/1/tasks/a1b2c3d4-e5f6-7890-1234-567890abcdef
+Accept: application/json
