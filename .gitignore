@@ -13,6 +13,7 @@
 out/
 
 # IDEs
+.idea
 .idea/                          # IntelliJ IDEA
 *.iml                           # IntelliJ IDEA module files
 .project                        # Eclipse
