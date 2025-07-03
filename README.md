@@ -37,7 +37,7 @@ O projeto utiliza as seguintes tecnologias e ferramentas principais:
 
 1.  **Clone o Repositório:**
     ```bash
-    git clone https://github.com/seu-usuario/todo.git # Substitua pelo seu usuário/link
+    git clone https://github.com/ArthurViniciusL/todo-api.git
     cd todo
     ```
 2.  **Abra na IDE:** Importe o projeto no IntelliJ IDEA, Eclipse ou VS Code como um projeto Maven.
