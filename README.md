@@ -75,14 +75,3 @@ Você pode testar os endpoints da API utilizando o arquivo `requests.http` local
       * `POST /api/persons/{personId}/tasks/{taskId}`: Atribuir uma tarefa a uma pessoa.
       * `DELETE /api/persons/{personId}/tasks/{taskId}`: Remover uma tarefa de uma pessoa.
 
------
-
-## 🤝 Contribuição
-
-Contribuições são bem-vindas\! Sinta-se à vontade para abrir *issues* ou *pull requests*.
-
------
-
------
-
-O que achou deste `README.md`? Ele aborda bem os pontos que você queria?
