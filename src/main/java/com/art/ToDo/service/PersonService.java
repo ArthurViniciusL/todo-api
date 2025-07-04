@@ -97,10 +97,10 @@ public class PersonService {
         Person person = personOpt.get();
         Task task = taskOpt.get();
 
-        if (!person.getTasks().contains(task)) {
+        if (person.getTasks().contains(task)) {
             person.getTasks().remove(task);
 
-            if (!task.getPersons().contains(person)) {
+            if (task.getPersons().contains(person)) {
                 task.getPersons().remove(person);
                 return PERSON_REPOSITORY.save(person);
             }
