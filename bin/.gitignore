@@ -1,0 +1,66 @@
+# git ignore genereted by Gemini
+
+# Arquivos de Build do Gradle
+.gradle
+/build/
+
+# Arquivos de Build do Maven
+/target/
+
+# Dependências
+/lib/
+/tmp/
+out/
+
+# IDEs
+.idea
+.idea/                          # IntelliJ IDEA
+*.iml                           # IntelliJ IDEA module files
+.project                        # Eclipse
+.classpath                      # Eclipse
+.settings/                      # Eclipse
+.vscode/                        # VS Code
+*.sublime-project               # Sublime Text
+*.sublime-workspace             # Sublime Text
+
+# Logs
+*.log
+logs/
+target/*.log
+
+# Arquivos de Configuração Específicos
+.DS_Store                       # macOS
+Thumbs.db                       # Windows
+Desktop.ini                     # Windows
+
+# Spring Boot
+*.jar                           # Arquivos JAR da aplicação
+*.war                           # Arquivos WAR da aplicação (se aplicável)
+*.zip
+*.tar.gz
+hs_err_pid*.log                 # JVM crash logs
+.springBeans                    # Spring-specific IDE files
+
+# Maven Wrapper
+.mvn/wrapper/maven-wrapper.jar  # O JAR do wrapper não precisa ser versionado
+
+# Banco de Dados H2 embutido (se estiver usando persistência em arquivo)
+*.mv.db                         # Arquivos de banco de dados H2 (ex: seu_banco.mv.db)
+*.trace.db                      # Arquivos de trace do H2
+
+# Variáveis de Ambiente e Configurações Sensíveis
+.env                            # Arquivos de ambiente comuns (se usar Dotenv)
+*.properties.local              # Configurações locais que não vão para o Git
+*.yml.local
+*/application-local.properties  # Exemplo de configuração local específica
+*/application-dev.properties    # Se não quiser versionar configurações de dev
+*/application-qa.properties     # Se não quiser versionar configurações de QA
+*/application-prod.properties   # **CUIDADO**: Versione as configs de prod se for uma prática segura e auditada!
+
+# Testes
+/src/test/resources/           # Se tiver arquivos específicos de teste que não devem ser versionados
+
+# Outros
+*.swp                           # Arquivos de swap do Vim
+*~                              # Backup files
+.#* # Emacs lock files

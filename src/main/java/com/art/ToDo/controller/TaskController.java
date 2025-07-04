@@ -34,17 +34,9 @@ public class TaskController {
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<?> getTaskById(@PathVariable UUID id) {
-        try {
-            Task task = TASK_SERVICE.getTaskById(id).orElseThrow(
-                    () -> new RuntimeException("Tarefa não encontrada")
-            );
-            return ResponseEntity.ok(task);
-        } catch (RuntimeException e) {
-            return ResponseEntity.status(HttpStatus.NOT_FOUND).body(e.getMessage());
-        } catch (Exception e) {
-            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Ocorreu um erro ao processar a requisição");
-        }
+    public ResponseEntity<Task> getTaskById(@PathVariable UUID id) {
+        Task task = TASK_SERVICE.getTaskById(id);
+        return ResponseEntity.ok(task);
     }
 
     @PutMapping("/{id}")

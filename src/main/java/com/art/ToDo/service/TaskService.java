@@ -2,6 +2,7 @@ package com.art.ToDo.service;
 
 import com.art.ToDo.model.entity.Task;
 import com.art.ToDo.repository.TaskRepository;
+import com.art.ToDo.service.exception.ResourceNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -27,8 +28,10 @@ public class TaskService {
         return TASK_REPOSITORY.findAll();
     }
 
-    public Optional<Task> getTaskById(UUID id) {
-        return TASK_REPOSITORY.findById(id);
+    public Task getTaskById(UUID id) {
+        return TASK_REPOSITORY.findById(id).orElseThrow(
+                () -> new ResourceNotFoundException("Tarefa " + id + "não encontrada")
+        );
     }
 
     public Task updateTask(UUID id, Task data) {
