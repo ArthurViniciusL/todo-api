@@ -15,6 +15,7 @@ import java.util.Map;
 public class GlobalExceptionHandler {
     @ExceptionHandler(ResourceNotFoundException.class)
     public ResponseEntity<Object> handleResourceNotFoundException (ResourceNotFoundException ex, WebRequest request) {
+
         Map<String, Object> body = new LinkedHashMap<String, Object>();
         body.put("timestamp", LocalDateTime.now());
         body.put("status", HttpStatus.NOT_FOUND.value());
